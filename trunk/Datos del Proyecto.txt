@@ -1,0 +1,28 @@
+galacticinvaders - Proyecto de Juego de Charly 
+
+Autor : CARLOS SEBASTIAN LOPEZ - https://galacticinvaders.googlecode.com/svn/trunk/
+
+Versión Actual 0.2 - Rev 2:
+
+Bueno Comenzamos con este proyecto de un juego estilo Space Invaders.
+Basicamente lo que hice es tomár la base de las practicas anteriores y empezar a moldear algo alrededor de eso:.cpp
+- Agregamos al Eval de cStatements una funcion extra lLevel.IsInObject que permite evaluar si dos objetos se encuentran en el mismo lugar, está se agrega junto con la anterior lLevel.IsInCell para poder verificar cuando tenemos celdas u objetos según alguna regla definida.
+-Todo el mapa de Level.xml fué modificado para simular el escenario de un clasico Space Invader (incluso hay algunas estrellas)
+- Definimos un par de clases  como player para que muestre una nave en la parte inferior y una clase Enemy que de acuerdo a su symbol definido renderiza un tipo de enemigo u otro 
+(hay tres tipos:
+* Bug: enemigo estandard
+* Spitter: dispara proyectiles
+* y Ghost: en este utilizo una tecnica diferente para su creación que me permite escribír menos en el Xml "clonando" el mismo enemigo con el mismo nombre y todo (pero que su borrado resulta de forma desordenada y aleatoria 
+- Creamos una Función "Spawn" que permite que los enemigos y el player puedan crear objetos "Shoot" 
+que no son otra cosa que los disparos
+- Quedaría para agregar más adelante en las proximas versiones algun sistema de score y vidas,(esto ultimo no pensé nada aún como implementar).
+
+PROBLEMAS:
+El juego original tenía una cuadrilla de enemigos de 5 x 11:
+- en esta versión para poder caracterizarlos Bien a mis aliens, estos son mucho más grandes que el verdadero espacio que ocupan (1 char) así que no hay forma de que entren en la pantalla toda esa cantidad.
+- De todos modos si quiero poner un ejercito de cantidad medianamente decente ( supongamos 4 x 5)
+trabajar escribiendolos uno por uno en el Xml se hace tedioso además de que luego al ejecutar el juego la lectura hace que el juego se muva MUY LENTA.
+Creo que necesito modificar la mecanica de creación y borrado de los objetos para hacerlo de una forma más generica supongamos que la creación, busqueda y borrado de objetos (enemigos, disparos y player) se haga mediante un un número de registro de serie o algo así, la cuestión es que no tengo claro por donde empezar a modificar.
+
+
+-0.1 - Rev 1 : subiendo Archivos de prueba y armando el proyecto.
