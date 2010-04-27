@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<Conversations>
+	<Characters>
+		<Character speakerId = "0" >Aliens</Character>
+		<Character speakerId = "1" >Humans</Character>
+	</Characters>
+	<Conversation nameId = "Comienzo" >
+		<Talk 		speakerId = "0" time = "5.0" >How are you gentlemen!!... You are on the way to Destruction!... </Talk>
+		<Talk 		speakerId = "0" time = "6.0" >ALL YOUR BASE BELONG TO US!!.. You have no chance to survive..</Talk>
+		<Talk 		speakerId = "1" time = "5.0" >Oh.. My GoD!...What you Say! Es el Peor Ingles he oido JaMaS!... </Talk>
+		<Talk 		speakerId = "0" time = "5.0" >ESTemmh... Atencion Humanos! Somos Invasores del Planeta Troll X-1 </Talk>
+		<Talk 		speakerId = "0" time = "5.0" >Abandonen todas sus armas y Rindanse Inmediatamente...</Talk>
+		<Talk 		speakerId = "0" time = "5.0" >les proveeremos de la mejor asistencia medica, Se Sentiran Bien...</Talk>
+
+		<ChooseTalk> 
+			<Option>
+				<Talk 		speakerId = "1" time = "5.0" >Largo de Aqui! Malditos Seres Repugnantes ! </Talk>	
+				<Talk 		speakerId = "0" time = "5.0" >Ja Ja, Tan poco te importa morir Terrestre ? </Talk>
+				<Talk 		speakerId = "0" time = "5.0" >Debes estas desvariando del miedo que tienes... </Talk>
+				<ChooseTalk> 
+					<Option>
+						<Talk 		speakerId = "1" time = "5.0" >No me dejan otra opcion mas que Luchar por la Vida</Talk>	
+						<Talk 		speakerId = "0" time = "5.0" >Escucha, por que no te rindes, necesitamos esclavos para un currito..</Talk>
+						<Talk 		speakerId = "1" time = "5.0" >No me dejan otra opcion mas que Luchar por la Libertad..</Talk>
+						<Talk 		speakerId = "0" time = "6.0" >Pero que te pasa? no lo entiendes,esto esta mal, esto es una locura..</Talk>
+						<Talk 		speakerId = "1" time = "6.0" >EsTOo.. ..eS... ..ESsPARTAAAAAaa!!!...</Talk>
+					</Option>
+					<Option>
+						<Talk 		speakerId = "1" time = "5.0" >Estoy dispuesto a pelear hasta el fin ! </Talk>	
+						<Talk 		speakerId = "0" time = "5.0" >Pobre tonto,Tu no eres problema para mi sofisticado cerebro...</Talk>
+						<Talk 		speakerId = "1" time = "5.0" >Estaria en problemas si realmente lo hubieras usado alguna vez </Talk>
+						<Talk 		speakerId = "0" time = "5.0" >vaya me suena conocido, Pareces un Granjero cascarrabias!</Talk>
+						<Talk 		speakerId = "1" time = "5.0" >Que apropiado peleas como una vaca... </Talk>
+						<Talk 		speakerId = "0" time = "5.0" >bien Basta!, ya lo Vamos a ver...</Talk>
+					</Option>		
+				</ChooseTalk>
+			</Option>
+			<Option>
+				<Talk 		speakerId = "1" time = "5.0" >Un momento, hay que dialogar, podriamos negociar un acuerdo de Paz.. </Talk>
+				<Talk 		speakerId = "0" time = "5.0" >mmhhh, que clase de acuerdo pacifico ? </Talk>
+				<ChooseTalk> 
+					<Option>
+						<Talk 		speakerId = "1" time = "5.0" >Existe un Tratado desde la Convencion de Ginebra... </Talk>	
+						<Talk 		speakerId = "0" time = "5.0" >Una bebida alcoholica? AH! quieren emborracharnos! en guardia!</Talk>
+					</Option>		
+					<Option>
+						<Talk 		speakerId = "1" time = "5.0" >Asistencia Medica?... de que estan hablando ? </Talk>	
+						<Talk 		speakerId = "0" time = "5.0" >Oh, es mentira, lo vimos en un comercial de la Remake de 'V'..</Talk>
+						<Talk 		speakerId = "0" time = "5.0" >pero ya nos descubrieron... asi que bueno, a pelear </Talk>
+					</Option>		
+					<Option>
+						<Talk 		speakerId = "1" time = "5.0" >Si les entrego a las demas personas harian la vista gorda conmigo ?</Talk>	
+						<Talk 		speakerId = "0" time = "5.0" >Claro que NO! lo que acabas de sugerir es terrible... </Talk>
+						<Talk 		speakerId = "0" time = "5.0" >nos has demostrado lo mas vil y miserable de su existencia...</Talk>
+						<Talk 		speakerId = "0" time = "5.0" >definitivamente merecen extingirse... Inicien el Ataque! </Talk>
+					</Option>
+					<Option>
+						<Talk 		speakerId = "1" time = "5.0" >Podriamos intercambiar cultura y tecnologias con beneficio mutuo...</Talk>	
+						<Talk 		speakerId = "0" time = "5.0" >Ni hablar, no confiamos en ustedes, la raza Humana </Talk>
+						<Talk 		speakerId = "0" time = "5.0" >son perversos miren la cosa horrible que han hecho... </Talk>
+						<Talk 		speakerId = "0" time = "5.0" >Permitieron la pelicula de Alone in the Dark !!! </Talk>
+					</Option>		
+				</ChooseTalk>
+			</Option>
+		</ChooseTalk>
+	</Conversation>
+</Conversations>

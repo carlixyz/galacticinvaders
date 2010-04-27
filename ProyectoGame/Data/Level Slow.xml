@@ -1,0 +1,249 @@
+<?xml version="1.0" ?>
+<Level width = "80" height = "23">
+	<Map>				
+		<Row><![CDATA[33333333333333333333333333333333333333333333333333333333333333333333333333333333]]></Row>
+		<Row><![CDATA[        9         H          9          I         9         J       2 9         ]]></Row>
+		<Row><![CDATA[                                      2                                         ]]></Row>
+		<Row><![CDATA[                                                                        2       ]]></Row>
+		<Row><![CDATA[              2                                                                 ]]></Row>
+		<Row><![CDATA[      4 A         H          B          I         C         J         D     2   ]]></Row>
+		<Row><![CDATA[                                                                                ]]></Row>
+		<Row><![CDATA[                           2                                                    ]]></Row>
+		<Row><![CDATA[                                                                                ]]></Row>
+		<Row><![CDATA[        5         E          6          F       2 7         G         8         ]]></Row>
+		<Row><![CDATA[                                                                                ]]></Row>
+		<Row><![CDATA[    2                                                                           ]]></Row>
+		<Row><![CDATA[                                                              2                 ]]></Row>
+		<Row><![CDATA[                                                       2                  2     ]]></Row>
+		<Row><![CDATA[                                                                                ]]></Row>
+		<Row><![CDATA[                  2                                                             ]]></Row>
+		<Row><![CDATA[                                          2                                     ]]></Row>
+		<Row><![CDATA[                                                                                ]]></Row>
+		<Row><![CDATA[              333             333             333             333               ]]></Row>
+		<Row><![CDATA[              ###             ###             ###          2  ###               ]]></Row>
+		<Row><![CDATA[                                                                                ]]></Row>
+		<Row><![CDATA[            2                           1                                       ]]></Row>
+		<Row><![CDATA[33333333333333333333333333333333333333333333333333333333333333333333333333333333]]></Row>
+	</Map>
+	
+	<SpecialCells>
+		<Cell cellId = "1"  contentType = "Player"         		 name = "Player" 		symbol = "+" />
+		<Cell cellId = "2"  contentType = "Special Location"         name = "Star" 			symbol = "." />
+		<Cell cellId = "3"  contentType = "Special Location" />	
+		<Cell cellId = "4"  contentType = "Special Location"         name = "Exit" 			symbol = ")" />	
+		<Cell cellId = "5"  contentType = "Enemy"       	   	 name = "Bug1"			symbol = "B" />
+		<Cell cellId = "6"  contentType = "Enemy"       	   	 name = "Bug2"			symbol = "B" />
+		<Cell cellId = "7"  contentType = "Enemy"       	   	 name = "Bug3"			symbol = "B" />
+		<Cell cellId = "8"  contentType = "Enemy"       	   	 name = "Bug4"			symbol = "B" />
+		<Cell cellId = "9"  contentType = "Enemy"       	   	 name = "Shadow"		symbol = "G" />
+		<Cell cellId = "A"  contentType = "Enemy"       	   	 name = "Spitter1"		symbol = "S" />
+		<Cell cellId = "B"  contentType = "Enemy"       	   	 name = "Spitter2"		symbol = "S" />
+		<Cell cellId = "C"  contentType = "Enemy"       	   	 name = "Spitter3"		symbol = "S" />
+		<Cell cellId = "D"  contentType = "Enemy"       	   	 name = "Spitter4"		symbol = "S" />
+		<Cell cellId = "E"  contentType = "Enemy"       	   	 name = "Bug5"			symbol = "B" />
+		<Cell cellId = "F"  contentType = "Enemy"       	   	 name = "Bug6"			symbol = "B" />
+		<Cell cellId = "G"  contentType = "Enemy"       	   	 name = "Bug7"			symbol = "B" />
+		<Cell cellId = "H"  contentType = "Enemy"       	   	 name = "Ghost1"		symbol = "G" />
+		<Cell cellId = "I"  contentType = "Enemy"       	   	 name = "Ghost2"		symbol = "G" />
+		<Cell cellId = "J"  contentType = "Enemy"       	   	 name = "Ghost3"		symbol = "G" />
+	</SpecialCells>
+	
+	<Rules>
+		<If>
+			<Conds>
+				<Content Object1 = "Player" Object2 = "Enemy" />
+			</Conds>
+			<Then>
+				<Move    name  = "Player" cellId = "1" />
+				<Message text = "Un Alien te ha deborado,haz muerto espantosamente, Felicidades"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Bug1" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Bug1" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "BoOM!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Bug2" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Bug2" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "BouM!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Bug3" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Bug3" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "BAnG!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Bug4" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Bug4" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "JihaD!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Bug5" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Bug5" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "JihaD!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Bug6" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Bug6" />
+				<Remove  name = "PlayerShoot" />
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Bug7" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Bug7" />
+				<Remove  name = "PlayerShoot" />
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Shadow" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Shadow" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "Fluush!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Ghost1" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Ghost1" />
+				<Remove  name = "PlayerShoot" />
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Ghost2" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Ghost2" />
+				<Remove  name = "PlayerShoot" />
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Ghost3" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Ghost3" />
+				<Remove  name = "PlayerShoot" />
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Spitter1" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Spitter1" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "Crash!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Spitter2" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Spitter2" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "AArgghhh!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Spitter3" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Spitter3" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "Crush!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Spitter4" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Spitter4" />
+				<Remove  name = "PlayerShoot" />
+				<Message text = "Help!"/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content cellId = "4" name = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Exit/>
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content cellId = "3" name = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "PlayerShoot" />
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content cellId = "3" name = "AlienShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "AlienShoot" />
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Enemy" Object2 = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Enemy" />
+				<Remove  name = "PlayerShoot" />
+			</Then>
+		</If>
+		<If>
+			<Conds>
+				<Content Object1 = "Player" name = "AlienShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "Player" />
+				<Message text = "GAME OVER"/>
+			</Then>
+		</If>
+	</Rules>
+</Level>
