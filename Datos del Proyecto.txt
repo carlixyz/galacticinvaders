@@ -2,11 +2,15 @@ galacticinvaders - Proyecto de Juego de Charly
 
 Autor : CARLOS SEBASTIAN LOPEZ - https://galacticinvaders.googlecode.com/svn/trunk/
 
-Versión Actual 0.2 - Rev 2:
+
+Versión Actual 0.2 - Rev 3:
+Haciendo Pequeñas modificaciones rapidas, ajustando el Render de level para hacerlo un poco más eficiente en rendimiento. 
+
+
+- Rev 2:
 
 Bueno Comenzamos con este proyecto de un juego estilo Space Invaders.
-Basicamente lo que hice es tomár la base de las practicas anteriores y empezar a moldear algo alrededor de eso:.cpp
-- Agregamos al Eval de cStatements una funcion extra lLevel.IsInObject que permite evaluar si dos objetos se encuentran en el mismo lugar, está se agrega junto con la anterior lLevel.IsInCell para poder verificar cuando tenemos celdas u objetos según alguna regla definida.
+Basicamente lo que hice es tomár la base de las practicas anteriores y empezar a moldear algo alrededor de eso:
 -Todo el mapa de Level.xml fué modificado para simular el escenario de un clasico Space Invader (incluso hay algunas estrellas)
 - Definimos un par de clases  como player para que muestre una nave en la parte inferior y una clase Enemy que de acuerdo a su symbol definido renderiza un tipo de enemigo u otro 
 (hay tres tipos:
@@ -25,4 +29,4 @@ trabajar escribiendolos uno por uno en el Xml se hace tedioso además de que lueg
 Creo que necesito modificar la mecanica de creación y borrado de los objetos para hacerlo de una forma más generica supongamos que la creación, busqueda y borrado de objetos (enemigos, disparos y player) se haga mediante un un número de registro de serie o algo así, la cuestión es que no tengo claro por donde empezar a modificar.
 
 
--0.1 - Rev 1 : subiendo Archivos de prueba y armando el proyecto.
+-0.1 : subiendo Archivos de prueba

@@ -26,7 +26,7 @@ bool cGame::Init()
 	cGraphicManager::Get().Init();
 
 	cConversationManager::Get().Init(".\\Data\\Conversation.xml"); // It´s suposse to Init and read ConversationManager
-//	cConversationManager::Get().StartConversation("Comienzo"); // Activar este para realizar una comica charla al iniciar el juego
+	cConversationManager::Get().StartConversation("Comienzo"); // Activar este para realizar una comica charla al iniciar el juego
 
 	mMessage.Init();// Inicializamos los atributos del mensaje
 	
