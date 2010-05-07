@@ -11,6 +11,8 @@
 #include "Statement.h"
 #include "LevelRules.h"
 
+
+
 class cLevel
 {
  	unsigned int muiWidth; // Estas podrían variar de un nivel al otro ?
