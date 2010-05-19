@@ -12,7 +12,6 @@
 #include "LevelRules.h"
 
 
-
 class cLevel
 {
  	unsigned int muiWidth; // Estas podrían variar de un nivel al otro ?
@@ -28,11 +27,18 @@ class cLevel
 	typedef std::list<cObject *> cObjectList;
 	typedef cObjectList::iterator cObjectListIt;
 
+	typedef std::list<cCollision> cCollisionList;
+	typedef cCollisionList::iterator cCollisionIt;
+
+
 	// List Declaration
 	cSpecialCellDictionary mDictionary;
 	
 	// List of Objects Declaration
 	cObjectList mObjects;
+
+	// List of Collisions Declaration
+	cCollisionList mCollisions;
 
 	cLevelRules mLevelRules;// Reglas contenidas en el Level
 
@@ -53,6 +59,8 @@ class cLevel
 		bool IsInCell(char lacParam1, std::string lacParam2);
 
 		bool IsInObject(std::string lacName1, std::string lacName2);
+
+
 
 		void Spawn(float luiX,float luiY, std::string lacName );
 
