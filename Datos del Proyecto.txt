@@ -3,7 +3,13 @@ galacticinvaders - Proyecto de Juego de Charly
 Autor : CARLOS SEBASTIAN LOPEZ - https://galacticinvaders.googlecode.com/svn/trunk/
 
 
-Versión Actual 0.2 - Rev 3:
+
+Versión Actual 0.2 - Rev 4:
+Atorado con el chequeo de collisiones ¿ como verificar que no se realize dos veces la misma colision vista desde cada uno de los dos objetos distintos ? La Colision siempre es UNA sola...
+Desactive temporalmente lo de los dialogos, la idea es que se ofrezca como opción al comienzo del juego, Comenzé bien y ahora estoy un poco frenado, a ver si puedo terminar lo que me propuse.
+
+
+- Rev 3:
 Haciendo Pequeñas modificaciones rapidas, ajustando el Render de level para hacerlo un poco más eficiente en rendimiento. 
 
 

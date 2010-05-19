@@ -60,6 +60,10 @@ protected:
 
 };
 
-
+struct cCollision // estructura para capturar objetos que collisionan entre si...
+{
+cObject * lpObject1;
+cObject * lpObject2;
+};
 
 

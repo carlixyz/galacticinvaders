@@ -12,10 +12,10 @@ bool cStatement::Eval(){// Metodo para consultar Condicionantes ( evaluar dos co
 
 			cLevel &lLevel = cGame::Get().GetLevel();
 			
-			return  ( (lLevel.IsInCell( macParam1[0], macParam2 ) ) || (lLevel.IsInObject(macParam1, macParam2))  );
+		//	return  ( (lLevel.IsInCell( macParam1[0], macParam2 ) ) || (lLevel.IsInObject(macParam1, macParam2))  );
 			// si param2 está en el mismo lugar de la SpecialCell u Objeto de param1 devolvemos true
 //	}
-	//return false;
+	return false;
 }
 
 void cStatement::Do(){// Metodo para ejecutar Acciones
