@@ -30,7 +30,6 @@ class cLevel
 	typedef std::list<cCollision> cCollisionList;
 	typedef cCollisionList::iterator cCollisionIt;
 
-
 	// List Declaration
 	cSpecialCellDictionary mDictionary;
 	
@@ -39,6 +38,9 @@ class cLevel
 
 	// List of Collisions Declaration
 	cCollisionList mCollisions;
+
+	// List of (to be) removed objects
+	cCollisionList mRemoveList;
 
 	cLevelRules mLevelRules;// Reglas contenidas en el Level
 
@@ -60,7 +62,7 @@ class cLevel
 
 		bool IsInObject(std::string lacName1, std::string lacName2);
 
-
+		bool CheckCollision(std::string lacName1, std::string lacName2);
 
 		void Spawn(float luiX,float luiY, std::string lacName );
 

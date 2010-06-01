@@ -8,13 +8,13 @@
 
 bool cStatement::Eval(){// Metodo para consultar Condicionantes ( evaluar dos cosas en un mismo lugar )
 
-//	if (meType == eStatementContent){
+	if (meType == eStatementContent){
 
 			cLevel &lLevel = cGame::Get().GetLevel();
-			
-		//	return  ( (lLevel.IsInCell( macParam1[0], macParam2 ) ) || (lLevel.IsInObject(macParam1, macParam2))  );
+
+			return  (  ( lLevel.IsInCell( macParam1[0], macParam2 ) ) || (lLevel.IsInObject(macParam1, macParam2))  );
 			// si param2 está en el mismo lugar de la SpecialCell u Objeto de param1 devolvemos true
-//	}
+	}
 	return false;
 }
 
@@ -64,7 +64,6 @@ void cStatement::Do(){// Metodo para ejecutar Acciones
 
 			cGame::Get().SetFinish(true);
 			;}break;
-
 
 
 		default:{// es una Condicional ejecutada como acción
