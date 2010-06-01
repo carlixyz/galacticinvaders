@@ -3,8 +3,16 @@ galacticinvaders - Proyecto de Juego de Charly
 Autor : CARLOS SEBASTIAN LOPEZ - https://galacticinvaders.googlecode.com/svn/trunk/
 
 
+Versión Actual 0.2 - Rev 5:
+Retomando el trabajillo abandonado cambié un poco el enfoque y encontré un par de deficiencias: 
+me contesto a mi mismo la pregunta que tenía en la Revisión anterior lo que pensé hacer es justamente hacér el chequeo de colisiones dentro del mismo update de esa manera si un objeto colisiona estando en una posición no debería volver a  hacerlo habiendo cambiado de lugar en el sigte. frame, para poder agilizar un poco las comprobaciones decidí  chequear el funcionamiento en modo debug directamente implementando la busqueda de coicidencia con las reglas en la función  IsInCell, y curioso, pero FUNCIONa!, todo se mueve rapido y correctamente, los enemigos disparan y sus proyectiles desaparecen al impactar en el fondo de la pantalla, pero ...
+siempre hay un pero curiosamente el disparo del jugador (o sea el nuestro) produce un error de memoria al alcanzar alguna celda numero "3" 
+¡ lo que funciona con el disparo de los enemigos no sirve para el nuestro ?!!
+excepto eso creo que todo lo demás funciona, pero habría que ver en otras Pcs.
+Una vez que verifique el completo funcionamiento de esto, entonces si ya voy a procurar simplificar en una función la verificación de objetos vs. Objetos y Objetos vs. Cells 
+(que me confunde bastante)
 
-Versión Actual 0.2 - Rev 4:
+- Rev 4:
 Atorado con el chequeo de collisiones ¿ como verificar que no se realize dos veces la misma colision vista desde cada uno de los dos objetos distintos ? La Colision siempre es UNA sola...
 Desactive temporalmente lo de los dialogos, la idea es que se ofrezca como opción al comienzo del juego, Comenzé bien y ahora estoy un poco frenado, a ver si puedo terminar lo que me propuse.
 

@@ -16,7 +16,7 @@ class cEnemy : public cObject
 
 	public:
 		cEnemy( unsigned luiX, unsigned luiY, const std::string &lacName, char lcSymbol) : cObject( luiX, luiY, lacName, lcSymbol) 
-		{ mfVX = 0.0f ; mfVY = 0.0f ; mfDelay = 0.0f; }
+		{ mfVX = 5.0f ; mfVY = 0.0f ; mfDelay = 0.0f; }
 		// Heredamos el constructor de cObject
 
 		inline float GetX()							 { return muiX; }
