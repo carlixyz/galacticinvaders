@@ -17,7 +17,9 @@ int main(int argc, char *argv[])
 	{
 		// Calculando el tiempo en segundos
 		unsigned long luiActualTime = timeGetTime(); 
+
 		float lfTimestep = ((float)(luiActualTime - luiLastTime)/ 1000.0f);
+
 		luiLastTime	= luiActualTime;  
 
 		cGame::Get().Update(lfTimestep);

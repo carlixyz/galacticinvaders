@@ -5,6 +5,14 @@
 		<Character speakerId = "1" >Humans</Character>
 	</Characters>
 	<Conversation nameId = "Comienzo" >
+
+	<Talk 		speakerId = "1" time = "15.0" >Una Forma de vida alienigena solicita comunicarse, desea responder ? </Talk>
+	<ChooseTalk>
+		<Option>
+		<Talk 		speakerId = "1" time = "15.0" >Ignorar el Mensaje y patearles el trasero...</Talk>
+		</Option>
+		<Option>
+		<Talk 		speakerId = "1" time = "15.0" >Responder al comunicado e intentar comunicarse diplomaticamente</Talk> 				          
 		<Talk 		speakerId = "0" time = "5.0" >How are you gentlemen!!... You are on the way to Destruction!... </Talk>
 		<Talk 		speakerId = "0" time = "6.0" >ALL YOUR BASE BELONG TO US!!.. You have no chance to survive..</Talk>
 		<Talk 		speakerId = "1" time = "5.0" >Oh.. My GoD!...What you Say! Es el Peor Ingles he oido JaMaS!... </Talk>
@@ -14,14 +22,15 @@
 
 		<ChooseTalk> 
 			<Option>
-				<Talk 		speakerId = "1" time = "5.0" >Largo de Aqui! Malditos Seres Repugnantes ! </Talk>	
+				<Talk 		speakerId = "1" time = "5.0" >Lo Siento, no negociamos con terroristas </Talk>	
 				<Talk 		speakerId = "0" time = "5.0" >Ja Ja, Tan poco te importa morir Terrestre ? </Talk>
+				<Talk 		speakerId = "1" time = "5.0" >Largo de Aqui! Malditos Seres Repugnantes ! </Talk>
 				<Talk 		speakerId = "0" time = "5.0" >Debes estas desvariando del miedo que tienes... </Talk>
 				<ChooseTalk> 
 					<Option>
 						<Talk 		speakerId = "1" time = "5.0" >No me dejan otra opcion mas que Luchar por la Vida</Talk>	
 						<Talk 		speakerId = "0" time = "5.0" >Escucha, por que no te rindes, necesitamos esclavos para un currito..</Talk>
-						<Talk 		speakerId = "1" time = "5.0" >No me dejan otra opcion mas que Luchar por la Libertad..</Talk>
+						<Talk 		speakerId = "1" time = "5.0" >No me dejan otra opcion mas que Luchar por la libertad</Talk>
 						<Talk 		speakerId = "0" time = "6.0" >Pero que te pasa? no lo entiendes,esto esta mal, esto es una locura..</Talk>
 						<Talk 		speakerId = "1" time = "6.0" >EsTOo.. ..eS... ..ESsPARTAAAAAaa!!!...</Talk>
 					</Option>
@@ -63,5 +72,7 @@
 				</ChooseTalk>
 			</Option>
 		</ChooseTalk>
+		</Option>
+	</ChooseTalk>
 	</Conversation>
 </Conversations>

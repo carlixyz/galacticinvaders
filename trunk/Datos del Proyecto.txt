@@ -3,7 +3,13 @@ galacticinvaders - Proyecto de Juego de Charly
 Autor : CARLOS SEBASTIAN LOPEZ - https://galacticinvaders.googlecode.com/svn/trunk/
 
 
-Versión Actual 0.2 - Rev 5:
+
+Versión Actual 0.5 - Rev 6:
+Bueno evidentemente el problema estaba en un segundo puntero de la lista de colissiones que accedía al mismo objeto en la memoria incluso luego de haber sido borrado, evidentemente tengo problemas con la memoria ja!
+en su condicion actual el proyecto ya es jugable así que voy a subír la versión para continuar haciendo un par de ultimas modificaciónes intensas más y luego doy por terminado el proyecto
+
+- Rev 5:
+
 Retomando el trabajillo abandonado cambié un poco el enfoque y encontré un par de deficiencias: 
 me contesto a mi mismo la pregunta que tenía en la Revisión anterior lo que pensé hacer es justamente hacér el chequeo de colisiones dentro del mismo update de esa manera si un objeto colisiona estando en una posición no debería volver a  hacerlo habiendo cambiado de lugar en el sigte. frame, para poder agilizar un poco las comprobaciones decidí  chequear el funcionamiento en modo debug directamente implementando la busqueda de coicidencia con las reglas en la función  IsInCell, y curioso, pero FUNCIONa!, todo se mueve rapido y correctamente, los enemigos disparan y sus proyectiles desaparecen al impactar en el fondo de la pantalla, pero ...
 siempre hay un pero curiosamente el disparo del jugador (o sea el nuestro) produce un error de memoria al alcanzar alguna celda numero "3" 
