@@ -28,8 +28,7 @@ void cStatement::Do(){// Metodo para ejecutar Acciones
 
 			cLevel &lLevel = cGame::Get().GetLevel();			
 			lLevel.Remove( macParam1);			
-			
-			
+						
 			;}break;
 
 		case 2:{// eStatementMessage
@@ -39,7 +38,6 @@ void cStatement::Do(){// Metodo para ejecutar Acciones
 				
 			cGame::Get().PrintMessage(macParam1);// le enviamos una solicitud que imprima el bendito mensaje a Game
 			
-
 			;}break;
 
 		case 3:{// eStatementMove
@@ -61,6 +59,11 @@ void cStatement::Do(){// Metodo para ejecutar Acciones
 			;}break;
 
 		case 5:{// eStatementExit
+
+			cGame::Get().SetFinish(true);
+			;}break;
+
+		case 6:{// eStatementExit
 
 			cGame::Get().SetFinish(true);
 			;}break;

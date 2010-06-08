@@ -62,11 +62,11 @@ class cLevel
 
 		bool IsInObject(std::string lacName1, std::string lacName2);
 
-		bool CheckCollision(std::string lacName1, std::string lacName2);
-
 		void Spawn(float luiX,float luiY, std::string lacName );
 
 		void Remove( std::string lacName );
+
+		void RemoveAllInCollision();
 
 		void Move( std::string lacName, char lcCellPosition );
 

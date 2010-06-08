@@ -27,7 +27,7 @@
 	</Map>
 	
 	<SpecialCells>
-		<Cell cellId = "1"  contentType = "Player"         		 name = "Player" 		symbol = "+" />
+		<Cell cellId = "1"  contentType = "Player"         		name = "Player" 		symbol = "+" />
 		<Cell cellId = "2"  contentType = "Special Location"         name = "Star" 			symbol = "." />
 		<Cell cellId = "3"  contentType = "Special Location" />	
 		<Cell cellId = "4"  contentType = "Special Location"         name = "Exit" 			symbol = ")" />	
@@ -50,7 +50,14 @@
 				<Exit/>
 			</Then>
 		</If>
-
+		<If>
+			<Conds>
+				<Content cellId = "3" name = "PlayerShoot" />
+			</Conds>
+			<Then>
+				<Remove  name = "PlayerShoot" />
+			</Then>
+		</If>
 		<If>
 			<Conds>
 				<Content cellId = "3" name = "AlienShoot" />
@@ -61,7 +68,7 @@
 		</If>
 		<If>
 			<Conds>
-				<Content cellId = "PlayerShoot" name = "AlienShoot" />
+				<Content Object1 = "PlayerShoot" Object2 = "AlienShoot" />
 			</Conds>
 			<Then>
 				<Remove  name = "AlienShoot" />
@@ -79,7 +86,7 @@
 		</If>
 		<If>
 			<Conds>
-				<Content Object1 = "Player" name = "AlienShoot" />
+				<Content Object1 = "Player" Object2 = "AlienShoot" />
 			</Conds>
 			<Then>
 				<Remove  name = "Player" />
