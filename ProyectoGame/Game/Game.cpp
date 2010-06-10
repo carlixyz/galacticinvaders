@@ -14,8 +14,15 @@ extern tActionMapping kaActionMapping[];
 // function to initialize the game
 bool cGame::Init()
 {	
-	// Initializing mbFinish to false 
+	// Initializing a lot of Vars 
 	mbFinish = false;
+
+	mbPlaying = true;
+
+	miLives = 3;
+
+	miScore = 0 ;
+	
 
 	// Inicialización de la clase InputManager ( y tooodas las cosas que esta hace... )
 	cInputManager::Get().Init(kaActionMapping, eIA_Count);
@@ -33,12 +40,14 @@ bool cGame::Init()
 	return true;
 }
 
-void cGame::PrintMessage( std::string &lacMessage){
-
+void cGame::PrintMessage( std::string &lacMessage)
+{
+	if ( ( lacMessage != "GAME OVER" ) || ( miLives == 0 ) )
+	{
 	mMessage.SetMessage(lacMessage);// Asignamos el mensaje
 
 	mMessage.SetMessageMode( true ); // Level le Asigna true al modo de mensaje de mMessage y este imprime
-
+	}
 }
 
 // Function to update the game
@@ -48,8 +57,11 @@ void cGame::Update(float lfTimestep)
 				
 		// Check the exit condition
 		const cInputAction & lAction = cInputManager::Get().GetAction( eIA_CloseApplication );
+		const cInputAction & lStart = cInputManager::Get().GetAction( eIA_Shoot );		
+
 		if ( lAction.GetIsPressed() ) // si el objeto lAction fué presionado...
 		{
+			mbPlaying = false; // no se juega más y
 			mbFinish = true;  // Se termina !
 			return;
 		}
@@ -59,6 +71,21 @@ void cGame::Update(float lfTimestep)
 	mLevel.Update(lfTimestep);// desde allí Llamamos al Update de todos los objetos
 
 	mMessage.Update(lfTimestep);// Actualizamos la duración del Mensaje en pantalla
+
+
+		if ( !this->IsPlaying() && !this->HasFinished() && lStart.GetIsPressed() ) // Si se presionó Shoot y no se está jugando ni terminó 
+	{
+		if ( miLives ) // Si el jugador tiene Vidas aún...
+		{
+				mLevel.Spawn( 40, 21, "Player"); 
+				mbPlaying = true ; // Juega con una nueva nave
+		}
+		else // Sino el juego ha terminado y debe reecomenzar
+		{
+				mbPlaying = true ; 
+				mbFinish = true;
+		}
+	}
 }
 
 
@@ -75,12 +102,32 @@ void cGame::Render()
 
 	cConversationManager::Get().Render();
 
+	lGraphic.SetColor( eLightPurple, eBlack); 
+	lGraphic.WriteChars( 2, 24, " LIVES = " );// Rendering Lives Left
+	std::stringstream lsLives;
+	lsLives << miLives ;
+	lGraphic.WriteChars( 12, 24, lsLives.str().c_str() );
 	
-	lGraphic.SetColor( eLightPurple, eBlack);
-	lGraphic.WriteChars( 52, 24, " GALAXY INVADERS - BETA" );
+	lGraphic.WriteChars( 62, 24, " SCORE " );  // Rendering total Score
+	std::stringstream lsScore;
+	lsScore << miScore ;
+	lGraphic.WriteChars( 70, 24, lsScore.str().c_str() );
+
+	lGraphic.SetColor( eWhite, eBlack);
+	lGraphic.WriteChars( 28, 24, " -< HIGH SCORE 20000 >- " ); // Rendering Fake Score
 
 	// if (mMessage.GetMessageMode())// Si mMessage devuelve true Renderizamos el Mensaje
 	mMessage.Render();
+
+	if ( !this->IsPlaying() && !this->HasFinished() )
+	{
+		if ( miLives )
+			lGraphic.WriteChars( 8, 22, " Your SpaceShip Was Destroyed - Press Space Bar to Try Again " );
+		else
+		{
+			lGraphic.WriteChars( 8, 22, " The Human Race is DoOMed! - Press Space Bar to Start a New Game " );
+		}
+	}
 	
 	//Swap the buffers
 	lGraphic.SwapBuffer();

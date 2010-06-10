@@ -9,10 +9,10 @@
 	<Talk 		speakerId = "1" time = "15.0" >Una Forma de vida alienigena solicita comunicarse, desea responder ? </Talk>
 	<ChooseTalk>
 		<Option>
-		<Talk 		speakerId = "1" time = "15.0" >Ignorar el Mensaje y patearles el trasero...</Talk>
+		<Talk 		speakerId = "1" time = "15.0" >Ignorar el Mensaje y patearles el trasero!...</Talk>
 		</Option>
 		<Option>
-		<Talk 		speakerId = "1" time = "15.0" >Responder al comunicado e intentar comunicarse diplomaticamente</Talk> 				          
+		<Talk 		speakerId = "1" time = "15.0" >Responder la comunicacion e intentar dialogar diplomaticamente</Talk> 				          
 		<Talk 		speakerId = "0" time = "5.0" >How are you gentlemen!!... You are on the way to Destruction!... </Talk>
 		<Talk 		speakerId = "0" time = "6.0" >ALL YOUR BASE BELONG TO US!!.. You have no chance to survive..</Talk>
 		<Talk 		speakerId = "1" time = "5.0" >Oh.. My GoD!...What you Say! Es el Peor Ingles he oido JaMaS!... </Talk>

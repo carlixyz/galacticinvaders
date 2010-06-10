@@ -35,7 +35,7 @@ public:
 
 		 if(this->mbMessageMode == true){
 			cGraphicManager::Get().SetColor( eLightWhite, eBlack);// Renderiza el mensaje
-			cGraphicManager::Get().WriteChars(40, 6, this->macMessage);
+			cGraphicManager::Get().WriteChars(35, 6, this->macMessage);
 
 		}
 	}

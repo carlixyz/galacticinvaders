@@ -9,6 +9,8 @@
 
 int main(int argc, char *argv[])
 {
+	lReboot: //Etiqueta Goto , malisima practica, lo sé, cuando aprenda más lo mejoro 
+
 	cGame::Get().Init();
 	
 	unsigned long luiLastTime = timeGetTime(); 
@@ -27,7 +29,10 @@ int main(int argc, char *argv[])
 		cGame::Get().Render();
 	}
 		cGame::Get().DeInit();
-	
 
+		if ( cGame::Get().IsPlaying() )
+			goto lReboot;
+		// a falta del diseño de un menu y un cambio de estados, vamos a recurrír a esto para re-comenzar un juego...
+	
 	return 0;
 }
