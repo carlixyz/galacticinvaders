@@ -90,6 +90,7 @@
 			</Conds>
 			<Then>
 				<Remove  name = "Player" />
+				<UpdateStats name = "PlayerDies"/>
 				<Message text = "GAME OVER"/>
 			</Then>
 		</If>
@@ -98,8 +99,9 @@
 				<Content Object1 = "Player" Object2 = "Enemy" />
 			</Conds>
 			<Then>
-				<Move    name  = "Player" cellId = "1" />
+				<Remove  name = "Player" />
 				<Message text = "Un Alien te ha deborado,haz muerto espantosamente, Felicidades"/>
+				<UpdateStats name = "PlayerDies"/>
 			</Then>
 		</If>
 		<If>
@@ -110,6 +112,7 @@
 				<Remove  name = "Bug1" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "BoOM!"/>
+				<UpdateStats name = "scoreup" points = "169"/>
 			</Then>
 		</If>
 		<If>
@@ -120,6 +123,7 @@
 				<Remove  name = "Bug2" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "BouM!"/>
+				<UpdateStats name = "scoreup" points = "240"/>
 			</Then>
 		</If>
 		<If>
@@ -130,6 +134,7 @@
 				<Remove  name = "Bug3" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "BAnG!"/>
+				<UpdateStats name = "scoreup" points = "157"/>
 			</Then>
 		</If>
 		<If>
@@ -140,6 +145,7 @@
 				<Remove  name = "Bug4" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "JihaD!"/>
+				<UpdateStats name = "scoreup" points = "16912"/>
 			</Then>
 		</If>
 		<If>
@@ -150,6 +156,7 @@
 				<Remove  name = "Shadow" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "Fluush!"/>
+				<UpdateStats name = "scoreup" points = "190"/>
 			</Then>
 		</If>
 		<If>
@@ -160,6 +167,7 @@
 				<Remove  name = "Spitter1" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "Crash!"/>
+				<UpdateStats name = "scoreup" points = "286"/>
 			</Then>
 		</If>
 		<If>
@@ -170,6 +178,7 @@
 				<Remove  name = "Spitter2" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "AArgghhh!"/>
+				<UpdateStats name = "scoreup" points = "386"/>
 			</Then>
 		</If>
 		<If>
@@ -180,6 +189,7 @@
 				<Remove  name = "Spitter3" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "Crush!"/>
+				<UpdateStats name = "scoreup" points = "486"/>
 			</Then>
 		</If>
 		<If>
@@ -190,6 +200,7 @@
 				<Remove  name = "Spitter4" />
 				<Remove  name = "PlayerShoot" />
 				<Message text = "Help!"/>
+				<UpdateStats name = "scoreup" points = "586"/>
 			</Then>
 		</If>
 	</Rules>

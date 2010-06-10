@@ -15,9 +15,15 @@ class cGame : public cSingleton<cGame>
 
 	bool mbFinish;// presionando escape se sale del program
 
+	bool mbPlaying; // Maquina de estados, sep, algo por el estilo
+
 	cLevel mLevel;
 
 	cMessage mMessage;
+
+	int miLives ;
+
+	int miScore ;	// General data Stats
 
 	protected:
 		cGame(){ ; } // protected Constructor 
@@ -36,6 +42,17 @@ class cGame : public cSingleton<cGame>
 
 		// función "ha Finalizado" de cierre del loop 
 		inline bool HasFinished()	{ return mbFinish; }
+
+		// función rapida para determinar estado del juego
+		inline bool IsPlaying() { return mbPlaying;  }
+
+		//Funciones para actualizar status de cantidad de vidas y puntos del jugador
+		inline void PlayerDies() { miLives = miLives - 1; }
+
+		inline void PlayerScored(int liPoints) { miScore += liPoints ;  }
+
+		// función para determinar si el jugador está jugando o no
+		inline void SetPlayingMode(bool lbMode) { mbPlaying = lbMode ; }
 
 		void SetFinish(bool lbSwitch) { mbFinish = lbSwitch;  }
 

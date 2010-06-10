@@ -10,7 +10,8 @@ enum eStatementType
 	eStatementMessage,
 	eStatementMove,
 	eStatementConversation,
-	eStatementExit
+	eStatementExit,
+	eStatementUpdateStats
 };
 
 

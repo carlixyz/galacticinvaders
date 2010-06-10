@@ -2,9 +2,13 @@ galacticinvaders - Proyecto de Juego de Charly
 
 Autor : CARLOS SEBASTIAN LOPEZ - https://galacticinvaders.googlecode.com/svn/trunk/
 
+Versión Actual 0.7 - Rev 7:
+El juego está practicamente funcional
+Ya Casi, Casi estamos, solo faltaría ajustar mejor el sistema de las listas de borrado de objetos y esas cosas la idea es mejorar un poco el sistema de movimiento de los enemigos y hacer que se asemeje realmente al de la versión original pero de todos modos así como está ya está bastante bonito no?.
+Cambio de Estados: No Hay, improvisé un par de cosas hardcoreadas bastantes chapuceras que en la practica funciónan y quedan bastante bonitas !
 
 
-Versión Actual 0.5 - Rev 6:
+- Rev 6:
 Bueno evidentemente el problema estaba en un segundo puntero de la lista de colissiones que accedía al mismo objeto en la memoria incluso luego de haber sido borrado, evidentemente tengo problemas con la memoria ja!
 en su condicion actual el proyecto ya es jugable así que voy a subír la versión para continuar haciendo un par de ultimas modificaciónes intensas más y luego doy por terminado el proyecto
 

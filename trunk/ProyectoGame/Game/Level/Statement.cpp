@@ -35,9 +35,9 @@ void cStatement::Do(){// Metodo para ejecutar Acciones
 
 		//	std::string lacObject = macParam1 + " Message Sended \n";
 		//	OutputDebugString( lacObject.c_str());
-				
+		
 			cGame::Get().PrintMessage(macParam1);// le enviamos una solicitud que imprima el bendito mensaje a Game
-			
+
 			;}break;
 
 		case 3:{// eStatementMove
@@ -63,9 +63,19 @@ void cStatement::Do(){// Metodo para ejecutar Acciones
 			cGame::Get().SetFinish(true);
 			;}break;
 
-		case 6:{// eStatementExit
+		case 6:{// eStatementUpdateStats
 
-			cGame::Get().SetFinish(true);
+			// points & lives
+			if ( macParam1 == "scoreup" )
+				cGame::Get().PlayerScored(atoi(macParam2.c_str()));
+			else 
+				if ( macParam1 == "PlayerDies")
+				{
+					cGame::Get().PlayerDies();
+					cGame::Get().SetPlayingMode(false);
+				}
+		//	cGame::Get().PrintMessage(macParam1);
+
 			;}break;
 
 
