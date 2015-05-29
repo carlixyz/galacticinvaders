@@ -1,0 +1,1 @@
+Un Juego homenaje con el clásico estilo del Space Invaders de 1978, con algunas pequeñas variaciones en su desarrollo.
